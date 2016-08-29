@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Phrase-o-matic</title>
+	<meta chareset="utf-8">
+
+	<script>
+		function makephrases(){
+			var word1 = ["1", "2", "3", "4", "5"];
+			var word2 = ["a", "b", "c", "d", "e"];
+			var word3 = ["6", "7", "8", "9", "10"];
+
+			var rand1 = Math.floor(Math.random() * word1.length);
+			var rand2 = Math.floor(Math.random() * word2.length);
+			var rand3 = Math.floor(Math.random() * word3.length);
+
+			var phrase = word1[rand1] + "--" + word2[rand2] + "--" + word3[rand3];
+			alert(phrase);
+		}
+
+		makephrases();
+	</script>
+
+</head>
+
+
+<body>
+</body>
+
+</html>

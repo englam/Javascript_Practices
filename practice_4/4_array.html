@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Phrase-o-matic</title>
+	<meta chareset="utf-8">
+
+	<script>
+		function highestscore(){
+			var scores = [51,22,44,32,98,34,12,86,32,45,87,44,22,11,98,43,22,65];
+
+			var highest = 0 ;
+			var highest_array = [];
+
+			for (var i = 0 ; i < scores.length; i++){
+				
+				if (scores[i] > highest){
+					highest = scores[i]
+				}
+
+			}
+
+			for (var i = 0 ; i < scores.length; i++){
+				if (scores[i] == highest){
+					highest_array.push(i);
+				}				
+
+			}
+
+			console.log(highest);
+			console.log(highest_array);
+
+		}
+
+		highestscore();
+	</script>
+
+</head>
+
+
+<body>
+</body>
+
+</html>
