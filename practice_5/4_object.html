@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Phrase-o-matic</title>
+	<meta chareset="utf-8">
+
+	<script>
+
+	var fiat = {
+
+		started : false,
+		fuel 	: 0	   ,
+		driver: function(){
+			if(this.started){
+
+				if(this.fuel){
+					alert ("Start Run")
+					this.fuel = this.fuel -1;
+				}
+				else{
+					alert("Fuel =0")
+					this.stop()
+				}
+				
+				
+			}
+			else{
+				alert ("Please start run first")
+			}
+		},
+
+		start : function(){
+			this.started = true;
+		},
+
+		stop : function(){
+			this.started = false;
+		},
+
+		addFuel : function(amount){
+			this.fuel = this.fuel + amount
+		}
+
+
+		};
+
+		fiat.start();
+		fiat.addFuel(2);
+		fiat.driver();
+		
+	</script>
+
+
+</head>
+
+
+<body>
+</body>
+
+</html>

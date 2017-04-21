@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Image Guess </title>
+
+	<style> 
+
+	body {margin:20px;}
+	img {margin:20px;}
+
+	</style>
+
+	<script>
+		window.onload = init;
+
+		function init(){
+			//把所有Tag Name 為img的 存到 img裡，為一個陣列
+			var img = document.getElementsByTagName("img");
+
+			for (var i = 0 ; i < img.length; i++)
+			{
+				//console.log(img[i]);
+				img[i].onclick = show_answer;
+			}
+
+		};
+		//eventobj 為事件物件， 當單擊處理程序被叫用後，會被傳入事件物件
+		function show_answer(eventobj){
+
+			var img2 = eventobj.target;
+			//console.log(img2);
+			console.log(img2.id);
+			//img2.src = "zero.jpg";
+
+			var name = img2.id;
+			img2.src = name+".jpg";
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<img id="zero" src="zeroblur.jpg">
+	<img id="one" src="oneblur.jpg">
+	<img id="two" src="twoblur.jpg">
+	<img id="three" src="threeblur.jpg">
+	<img id="four" src="fourblur.jpg">
+	<img id="five" src="fiveblur.jpg">
+
+</body>
+
+</html>

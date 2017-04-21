@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Image Guess </title>
+
+	<style> 
+
+	body {margin:20px;}
+	img {margin:20px;}
+
+	</style>
+
+	<script>
+		window.onload = init;
+
+		function init(){
+			//把所有Tag Name 為img的 存到 img裡，為一個陣列
+			var map = document.getElementById("map");
+
+			map.onmousemove = showCoords;
+
+		};
+		//eventobj 為事件物件， 當單擊處理程序被叫用後，會被傳入事件物件
+		function showCoords(eventobj){
+
+			var map = document.getElementById("coords");
+			var x = eventobj.clientX;
+			var y = eventobj.clientY;
+			map.innerHTML = "Map coordinates: " +x + "," + y;
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<img id="map" src="map.jpg">
+	<p id="coords">Move mouse to find coordinates....</p>
+
+
+</body>
+
+</html>
+

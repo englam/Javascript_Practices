@@ -1,0 +1,45 @@
+<!docutype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Planets</title>
+
+	<style>
+		.redtext {color: red; }
+
+		.democlass {color: red;}
+	</style>
+
+	<script>
+	function test(){
+	var planet = document.getElementById("greenplanet");
+	planet.innerHTML = "Red Alert: Hit by fire!";
+	planet.setAttribute("class", "redtext");
+	}
+
+	window.onload = test;	
+
+
+
+	function myFunction() {
+    document.getElementsByTagName("H1")[2].setAttribute("class", "democlass");
+	}
+	</script>
+
+</head>
+<body>
+	<h1>Green Planet</h1>
+	<p id="greenplanet">All is well</p>
+	<h1>Red Planet</h1>
+	<p id="redplanet">Nothing to report</p>
+
+	<h1>Hello World</h1>
+	<p>Click the button to add a class attribute with the value of "democlass" to the h1 element.</p>
+	<button onclick="myFunction()">Try it</button>
+
+</body>
+
+
+</html>
+
+<!---插入屬性到id->

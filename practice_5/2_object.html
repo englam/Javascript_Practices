@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Phrase-o-matic</title>
+	<meta chareset="utf-8">
+
+	<script>
+
+	var car = {
+		make 		: "Flat",
+		model 		: "500",
+		year  		: "1985",
+		color 		: "yellow",
+		passengers  : "2",
+
+		started		: false,
+
+		start 		: function(){
+			this.start = true
+		},
+		stop 		: function(){
+			this.start = false
+		},
+
+		driver		: function(){
+			if (this.started == true){
+				console.log ("Start function Test")
+			}
+			else{
+				console.log ("Stop function Test")
+			}
+
+		}
+
+	};
+
+	car.started = true;
+
+	car.driver()
+		
+	</script>
+
+</head>
+
+
+<body>
+</body>
+
+</html>
